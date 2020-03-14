@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="caixa-form">
         <h1>Prova Técnica - EloGroup</h1>
-        <form name="formulario" onsubmit="validar()">
+        <form name="formulario" onsubmit="validar()" id="formulario" action="#">
             <label for="nome">Nome e Sobrenome</label>
             <input type="text" id="nome" name="nome" class="input-padrao" required>
 
@@ -30,9 +31,9 @@
             </div>
             <div id="redes">
                 <p>Quais?</p>
-                <label><input type="checkbox">Facebook</label>
-                <label><input type="checkbox">LinkedIn</label>
-                <label><input type="checkbox">Instagram</label>
+                <label><input type="checkbox" name="redes" id="Facebook" value="Facebook" onclick="show_checked()">Facebook</label>
+                <label><input type="checkbox" name="redes" id="Linkedin" value="Linkedin" onclick="show_checked()">Linkedin</label>
+                <label><input type="checkbox" name="redes" id="Instagram" value="Instagram" onclick="show_checked()">Instagram</label>
             </div><br>
 
             <input type="submit" value="ENVIAR">
