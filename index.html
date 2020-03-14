@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="caixa-form">
+        <h1>Prova Técnica - EloGroup</h1>
+        <form name="formulario" onsubmit="validar()">
+            <label for="nome">Nome e Sobrenome</label>
+            <input type="text" id="nome" name="nome" class="input-padrao" required>
+
+            <label for="telefone">Telefone</label>
+            <input type="text" id="telefone" name="telefone" class="input-padrao" placeholder="00 - 000000000" required>
+
+            <label for="meios">Como nos conheceu</label>
+            <select id="meios" class="input-padrao">
+                <option value="tv">TV</option>
+                <option value="internet">Internet</option>
+                <option value="outros">Outros</option>
+            </select>
+
+            <div>
+                <p>Possui rede social?</p>
+                <label for="sim"><input type="radio" onclick="mostrarRedes()" name="opcao" value="sim" checked="checked">Sim</label>
+                <label for="nao"><input type="radio" onclick="esconderRedes()" name="opcao" value="nao">Não</label>
+            </div>
+            <div id="redes">
+                <p>Quais?</p>
+                <label><input type="checkbox">Facebook</label>
+                <label><input type="checkbox">LinkedIn</label>
+                <label><input type="checkbox">Instagram</label>
+            </div><br>
+
+            <input type="submit" value="ENVIAR">
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
